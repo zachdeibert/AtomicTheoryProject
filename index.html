@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Atomic Theory
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="document.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="canvas.js"></script>
+        <script type="text/javascript" src="atom.js"></script>
+        <script type="text/javascript" src="molecule.js"></script>
+        <script type="text/javascript" src="hydrogen.js"></script>
+        <script type="text/javascript" src="oxygen.js"></script>
+        <script type="text/javascript" src="water.js"></script>
+        <script type="text/javascript" src="atomicCanvas.js"></script>
+        <script type="text/javascript" src="mods.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body onload="load()">
+        <header>
+            <h1>
+                Atomic Theory
+            </h1>
+            <div class="gradient"></div>
+        </header>
+        <div class="top">
+            <div class="correct">
+                <div class="before">
+                    <canvas width="400" height="300" id="correct-before"></canvas>
+                </div>
+                <div class="after">
+                    <canvas width="400" height="300" id="correct-after"></canvas>
+                </div>
+                <div class="label">
+                    Correct
+                </div>
+            </div>
+            <div class="incorrect">
+                <div class="before">
+                    <canvas width="400" height="300" id="incorrect-before"></canvas>
+                </div>
+                <div class="after">
+                    <canvas width="400" height="300" id="incorrect-after"></canvas>
+                </div>
+                <div class="label">
+                    Incorrect
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="ctrl">
+                <button class="btn btn-default btn-left" id="btn-heat" onclick="heat()">
+                    Heat
+                </button>
+                <button class="btn btn-default btn-right" id="btn-cool" onclick="cool()">
+                    Cool
+                </button>
+                <button class="btn btn-default" id="btn-bonds" onclick="bonds()">
+                    Break Bonds
+                </button>
+                <button class="btn btn-default" id="btn-pause" onclick="pause()">
+                    Pause
+                </button>
+                <button class="btn btn-default" id="btn-about" data-toggle="modal" data-target=".about">
+                    About
+                </button>
+                <button class="btn btn-default" id="btn-reset" onclick="location.reload()">
+                    Reset
+                </button>
+            </div>
+            <div class="gradient"></div>
+        </footer>
+        <div class="about modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="modal-title">
+                            About
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2>
+                            <a href="https://github.com/zachdeibert/AtomicTheoryProject">
+                                https://github.com/zachdeibert/AtomicTheoryProject
+                            </a>
+                        </h2>
+                        <p>
+                            This is the Atomic Theory project for Pre-AP Chemistry for:
+                            <ul>
+                                <li>
+                                    Zach Deibert
+                                </li>
+                                <li>
+                                    Matthew Ghilino
+                                </li>
+                                <li>
+                                    Kenton Smith
+                                </li>
+                            </ul>
+                            Here are our sources for the information in our presentation:
+                            <ul>
+                                <li>
+                                    <a href="https://www.chem.wisc.edu/deptfiles/genchem/sstutorial/Text1/Tx14/tx14.html">
+                                        https://www.chem.wisc.edu/deptfiles/genchem/sstutorial/Text1/Tx14/tx14.html
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.iun.edu/~cpanhd/C101webnotes/composition/dalton.html">
+                                        http://www.iun.edu/~cpanhd/C101webnotes/composition/dalton.html
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
